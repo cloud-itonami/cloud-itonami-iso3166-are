@@ -1,0 +1,23 @@
+;; data/datascript-tx.edn — DataScript tx-data derived from src/statute/facts.cljc
+;; `statute.facts/catalog` (ADR-2607141700 Wave 0). Same shape as sibling files.
+
+[#:statute{:id "are.federal-law-2-2015-commercial-companies"
+           :title "Federal Law No. 2 of 2015 on Commercial Companies"
+           :jurisdiction "ARE"
+           :kind :law
+           :law-number "Federal Law No. 2 of 2015"
+           :url "https://www.wipo.int/wipolex/edocs/lexdocs/laws/en/ae/ae042en.pdf"
+           :url-provenance :official-wipo-lex-mirror
+           :enacted-date "2015-03-25"
+           :retrieved-at "2026-07-16"
+           :topic [:corporate-governance :incorporation]}
+ #:statute{:id "are.federal-decree-law-45-2021-personal-data-protection"
+           :title "Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data"
+           :jurisdiction "ARE"
+           :kind :law
+           :law-number "Federal Decree-Law No. 45 of 2021"
+           :url "https://protection-data.ae/wp-content/uploads/2023/10/federal-decret-law-45-uae.pdf"
+           :url-provenance :mereller-legal-translation-mirror
+           :enacted-date "2022-01-02"
+           :retrieved-at "2026-07-16"
+           :topic [:data-protection :privacy]}]

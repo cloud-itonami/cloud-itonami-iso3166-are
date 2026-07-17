@@ -1,0 +1,13 @@
+;; data/culture-tx.edn — DataScript tx-data derived from src/culture/facts.cljc
+;; `culture.facts/catalog` (ADR-2607171400 addendum 2, Wave 1 country-level).
+;; Same shape across every cloud-itonami-iso3166-* sibling. Do not hand-edit;
+;; regenerate from the catalog.
+
+[
+#:culture{:url "https://en.wikipedia.org/wiki/Kabsa", :id "are.dish.machboos", :kind :dish, :name-local "مجبوس", :country "ARE", :retrieved-at "2026-07-17", :summary "Arab mixed rice dish of the kabsa family, known in the Gulf as machboos and commonly regarded as a national dish in Gulf Cooperation Council countries including the United Arab Emirates.", :name "Machboos", :url-provenance :wikipedia-en}
+#:culture{:url "https://en.wikipedia.org/wiki/Harees", :id "are.dish.harees", :kind :dish, :name-local "هريس", :country "ARE", :retrieved-at "2026-07-17", :summary "Cracked-wheat and meat porridge commonly eaten in the Arab states of the Persian Gulf, a traditional Emirati dish popular during Ramadan and festive occasions.", :name "Harees", :url-provenance :wikipedia-en}
+#:culture{:url "https://en.wikipedia.org/wiki/Balaleet", :id "are.dish.balaleet", :kind :dish, :name-local "بلاليط", :country "ARE", :retrieved-at "2026-07-17", :summary "Sweet-and-savoury Arabian breakfast dish of vermicelli sweetened with sugar, cardamom, rose water and saffron and served with an egg omelette, with the United Arab Emirates listed among its places of origin.", :name "Balaleet", :url-provenance :wikipedia-en}
+#:culture{:url "https://en.wikipedia.org/wiki/Al_Sadu", :id "are.craft.al-sadu", :kind :craft, :name-local "السدو", :country "ARE", :retrieved-at "2026-07-17", :summary "Traditional Bedouin weaving technique in geometric patterns practiced in the Gulf including the United Arab Emirates, inscribed on UNESCO's Intangible Cultural Heritage list.", :name "Al Sadu", :url-provenance :wikipedia-en}
+#:culture{:id "are.festival.dubai-shopping-festival", :name "Dubai Shopping Festival", :country "ARE", :kind :festival, :summary "Annual month-long shopping and entertainment festival held in Dubai, United Arab Emirates, since 1996.", :url "https://en.wikipedia.org/wiki/Dubai_Shopping_Festival", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:url "https://en.wikipedia.org/wiki/Al_Ain", :id "are.heritage.al-ain", :kind :heritage, :name-local "العين", :country "ARE", :retrieved-at "2026-07-17", :summary "The Cultural Sites of Al Ain (Hafit, Hili, Bidaa Bint Saud and Oases Areas) in the Emirate of Abu Dhabi were inscribed in 2011 as the first UNESCO World Heritage Site in the United Arab Emirates.", :name "Cultural Sites of Al Ain", :url-provenance :wikipedia-en}
+]

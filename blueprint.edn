@@ -7,4 +7,26 @@
  :itonami.blueprint/governor :market-entry-compliance-governor
  :itonami.blueprint/robotics false
  :itonami.blueprint/required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
- :itonami.blueprint/status :public-oss}
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/maturity :implemented
+ :itonami.blueprint/implemented-slice
+ "MarketEntry-LLM Advisor ⊣ Market-Entry Compliance Governor, a REAL
+ compiled `kotoba-lang/langgraph` StateGraph (`:intake -> :advise ->
+ :govern -> :decide -+-> :commit / :request-approval -> :commit /
+ :hold`), append-only audit ledger. Seven governor checks, in priority
+ order, ALL HARD violations a human approver cannot override:
+ spec-basis citation, evidence-checklist completeness, UAE-resident
+ authorized-representative verification (`:requires-ae-entity?` /
+ `:has-ae-entity?`, the flagship check for this jurisdiction),
+ independent engagement-fee recompute (base + months x rate),
+ trade-license verification (`:requires-trade-license?` /
+ `:trade-license-verified?`), double-draft guard, double-submit
+ guard, plus a SOFT confidence-floor/actuation gate. `:filing/draft`
+ and `:filing/submit` (real portal actuation) never auto-commit in
+ any phase; `interrupt-before #{:request-approval}` pauses escalated
+ requests for real human sign-off via a checkpointer, and BOTH
+ `:commit` and `:hold` durably append to the real audit ledger
+ (`store/append-ledger!`). Store has a `MemStore` and a `DatomicStore`
+ (via `kotoba-lang/langchain-store`, no hand-rolled EDN-blob codec),
+ proven equivalent by a shared store-contract test. 33 tests / 107
+ assertions green, clj-kondo 0 errors."}
